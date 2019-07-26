@@ -29,7 +29,7 @@
                  <a href="#">Mandates</a>
                  <ul>
                      <li>
-                         <a href="#">Looking for a Mandate, Sourcing agent</a>
+                         <a href="{{ route('mandates.request') }}">Looking for a Mandate, Sourcing agent</a>
                      </li>
 
                      <li>
@@ -37,7 +37,7 @@
                      </li>
 
                      <li>
-                         <a href="#">Lay a Complain</a>
+                         <a href="{{ route('mandates.complain') }}">Lay a Complain</a>
                      </li>
                  </ul>
              </li>
@@ -91,7 +91,7 @@
                  </ul>
              </li>
 
-             <li class="pull-right"><a href="#">Login</a></li>
+             <li class="pull-right"><a href="{{ route('login') }}">Login</a></li>
            </ul>
 
 

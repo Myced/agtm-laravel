@@ -25,7 +25,7 @@ class AgentsController extends Controller
 
         if(auth()->user())
         {
-            $agentRequest->user_id = auth()->user()->id;
+            $complain->user_id = auth()->user()->id;
         }
 
         $complain->name = $request->name;

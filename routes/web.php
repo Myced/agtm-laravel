@@ -1,16 +1,5 @@
 <?php
 
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| contains the "web" middleware group. Now create something great!
-|
-*/
-
 Route::get('/', "HomeController@index")->name('index');
 
 Auth::routes();
@@ -26,6 +15,14 @@ Route::group(['prefix' => 'agents'], function(){
     Route::post('/request/store', 'AgentsController@requestStore')->name('agents.request.store');
     Route::get('/law-complain', 'AgentsController@showComplainForm')->name('agents.law-complain');
     Route::post('/law-complain.store', 'AgentsController@storeComplain')->name('agents.complain.store');
+});
+
+Route::group(['prefix' => 'mandates'], function(){
+    Route::get('/', 'MandatesController@index')->name('mandates');
+    Route::get('/request', 'MandatesController@showRequestForm')->name('mandates.request');
+    Route::post('/request/store', 'MandatesController@storeRequest')->name('mandates.request.store');
+    Route::get("/complain", 'MandatesController@showComplainForm')->name("mandates.complain");
+    Route::post('/complain/store', 'MandatesController@storeComplain')->name('mandates.complain.store');
 });
 
 Route::group(['prefix' => 'admin'], function(){

@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateAgentComplainsTable extends Migration
+class CreateAccountTypesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,13 +13,9 @@ class CreateAgentComplainsTable extends Migration
      */
     public function up()
     {
-        Schema::create('agent_complains', function (Blueprint $table) {
+        Schema::create('account_types', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('user_id')->nullable();
             $table->string('name');
-            $table->string('tel');
-            $table->string('email');
-            $table->string('title');
             $table->text('description');
             $table->timestamps();
         });
@@ -32,6 +28,6 @@ class CreateAgentComplainsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('agent_complains');
+        Schema::dropIfExists('account_types');
     }
 }
