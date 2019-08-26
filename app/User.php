@@ -10,13 +10,21 @@ class User extends Authenticatable
 {
     use Notifiable;
 
+    const AVATAR_PATH = "images/avatars/";
+    const DEFAULT_AVATAR = "/images/avatars/user.png";
+
+    const ACTIVE = "ACTIVE";
+    const UNACTIVATED = "UNACTIVATED";
+    const BLOCKED = "BLOCKED";
+    const SUSPENDED = "SUSPENDED";
+
     /**
      * The attributes that are mass assignable.
      *
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password',
+        'name', 'email', 'password', 'avatar', 'code'
     ];
 
     /**

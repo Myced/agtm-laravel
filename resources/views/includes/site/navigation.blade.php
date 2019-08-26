@@ -91,7 +91,29 @@
                  </ul>
              </li>
 
-             <li class="pull-right"><a href="{{ route('login') }}">Login</a></li>
+             @auth
+                 <li class="pull-right">
+                     <a href="#">My Account</a>
+                     <ul>
+                         <li>
+                             <a href="#">My Account</a>
+                         </li>
+
+                         <li>
+                             <form action="{{ route('logout') }}" id="logout" method="post">
+                                 @csrf
+                             </form>
+                             <a href="{{ route('logout') }}"
+                                onclick="event.preventDefault();
+                                    document.getElementById('logout').submit()">Logout</a>
+                         </li>
+                     </ul>
+                 </li>
+             @else
+                <li class="pull-right"><a href="{{ route('login') }}">Login</a></li>
+                <li class="pull-right"><a href="{{ route('register') }}">Register</a></li>
+             @endauth
+
            </ul>
 
 

@@ -277,6 +277,28 @@ input.search-info:focus
     font-size: 14px;
 }
 
+.mycard {
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.2);
+  max-width: 300px;
+  margin: auto;
+  text-align: center;
+  font-family: arial;
+}
+
+.mycard:hover
+{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5);
+}
+
+.card-text a
+{
+    padding: 40px 10px;
+    display: block;
+    color: #0bb9fa;
+    font-size: 20px;
+    font-weight: bold;
+}
+
 .card {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   max-width: 300px;
@@ -361,6 +383,62 @@ input.search-info:focus
 }
 
 .cat-icon
+{
+    float: right;
+    padding-right: 20px;
+    transition: all 1s;
+}
+
+.chat-title
+{
+    border: 1px solid #097fe0;
+    padding: 10px;
+    color: #fff;
+    background-color: #097fe0;
+    font-weight: 700;
+}
+
+.chat-body
+{
+    border: 1px solid #097fe0;
+}
+
+.chat-list
+{
+    list-style-type: none;
+    padding-left: 0px;
+}
+
+.chat-list li
+{
+
+}
+
+.chat-list li a
+{
+    display: block;
+    padding: 5px;
+    padding-left: 15px;
+    font-size: 14px;
+    color: #444;
+    border-bottom: 1px solid #f4f4f4;
+    transition: all 1s;
+}
+
+.chat-list li a:hover
+{
+    background: #efefef;
+    font-weight: bold;
+    font-size: 15px;
+
+}
+
+.chat-list li a:hover .chat-icon
+{
+    padding-right: 10px;
+}
+
+.chat-icon
 {
     float: right;
     padding-right: 20px;
@@ -515,85 +593,343 @@ ul.block-list li
         <!-- end of column -->
     </div>
 
-    <div class="row" style="margin-top: 30px;">
-        <div class="col-md-3">
-            <div class="cat-title">
-                <span class="cat-text">
-                    <i class="fa fa-navicon"></i>
-                    CATEGORIES
-                </span>
-            </div>
-
-            <div class="cat-body">
-                <ul class="cat-list">
-                    <li>
-                        <a href="#">
-                            Cooking Oil
-                            <span class="cat-icon">
-                                <i class="fa fa-angle-right"></i>
-                            </span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            Agriculture
-                            <span class="cat-icon">
-                                <i class="fa fa-angle-right"></i>
-                            </span>
-                        </a>
-
-                        <div class="sub-menu">
-                            <h3>Title</h3>
-
-                            <ul class="sub-menu-list">
-                                <li>
-                                    <a href="#">Item </a>
-                                </li>
-                                <li>
-                                    <a href="#">Item 2</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </li>
-                    <li>
-                        <a href="#">
-                            Electronics
-                            <span class="cat-icon">
-                                <i class="fa fa-angle-right"></i>
-                            </span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            Dairy
-                            <span class="cat-icon">
-                                <i class="fa fa-angle-right"></i>
-                            </span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            Spices
-                            <span class="cat-icon">
-                                <i class="fa fa-angle-right"></i>
-                            </span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            Computer
-                            <span class="cat-icon">
-                                <i class="fa fa-angle-right"></i>
-                            </span>
-                        </a>
-                    </li>
-                </ul>
-            </div>
+    <br>
+    <div class="row">
+        <div class="col-md-2">
+            <h3>Join Chat</h3>
         </div>
 
-        <div class="col-md-9">
+        <div class="col-md-8">
+            <div class="col-md-12">
+                <div id="mycarousel" class="carousel slide" data-ride="carousel">
+                    <ol class="carousel-indicators">
+                        <li data-target="#mycarousel" data-slide-to="0" class="active"></li>
+                        <li data-target="#mycarousel" data-slide-to="1"></li>
+                        <li data-target="#mycarousel" data-slide-to="2"></li>
+                    </ol>
+
+                    <div class="carousel-inner">
+                        <div class="item active">
+                            <img class="d-block w-100" src="/site/images/slide_1.jpg" alt="First slide">
+                        </div>
+                        <div class="item">
+                            <img class="d-block w-100" src="/site/images/slide_2.jpg" alt="Second slide">
+                        </div>
+
+                        <div class="item">
+                            <img class="d-block w-100" src="site/images/slide_3.jpg" alt="Third slide">
+                        </div>
+                    </div>
+
+                    <a class="left carousel-control" href="#mycarousel" data-slide="prev">
+                        <span class="glyphicon glyphicon-chevron-left"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+
+                    <a class="right carousel-control" href="#mycarousel" data-slide="next">
+                        <span class="glyphicon glyphicon-chevron-right"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-2">
+            <h3>Join Forum</h3>
+        </div>
+    </div>
+
+    <div class="row" style="margin-top: 30px;">
+        <div class="col-md-3">
+
+            <!-- //create first row for categories -->
             <div class="row">
-                <div class="col-md-4">
+                <div class="col-md-12">
+                    <div class="cat-title">
+                        <span class="cat-text">
+                            <i class="fa fa-navicon"></i>
+                            CATEGORIES
+                        </span>
+                    </div>
+
+                    <div class="cat-body">
+                        <ul class="cat-list">
+                            <li>
+                                <a href="#">
+                                    Cooking Oil
+                                    <span class="cat-icon">
+                                        <i class="fa fa-angle-right"></i>
+                                    </span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    Agriculture
+                                    <span class="cat-icon">
+                                        <i class="fa fa-angle-right"></i>
+                                    </span>
+                                </a>
+
+                                <div class="sub-menu">
+                                    <h3>Title</h3>
+
+                                    <ul class="sub-menu-list">
+                                        <li>
+                                            <a href="#">Item </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Item 2</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    Electronics
+                                    <span class="cat-icon">
+                                        <i class="fa fa-angle-right"></i>
+                                    </span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    Dairy
+                                    <span class="cat-icon">
+                                        <i class="fa fa-angle-right"></i>
+                                    </span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    Spices
+                                    <span class="cat-icon">
+                                        <i class="fa fa-angle-right"></i>
+                                    </span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    Computer
+                                    <span class="cat-icon">
+                                        <i class="fa fa-angle-right"></i>
+                                    </span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <br>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="chat-title">
+                        <span class="chat-text">
+                            <i class="fa fa-comment"></i>
+                            CHAT ROOMS
+                        </span>
+                    </div>
+
+                    <div class="chat-body">
+                        <ul class="chat-list">
+                            <li>
+                                <a href="#">
+                                    LOI Chats
+                                    <span class="chat-icon">
+                                        <i class="fa fa-angle-right"></i>
+                                    </span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    Agricultural Products
+                                    <span class="chat-icon">
+                                        <i class="fa fa-angle-right"></i>
+                                    </span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    Electronics & Telephones
+                                    <span class="chat-icon">
+                                        <i class="fa fa-angle-right"></i>
+                                    </span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    Dairy Chat
+                                    <span class="chat-icon">
+                                        <i class="fa fa-angle-right"></i>
+                                    </span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    Spices Chat
+                                    <span class="chat-icon">
+                                        <i class="fa fa-angle-right"></i>
+                                    </span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    Computer Chat
+                                    <span class="chat-icon">
+                                        <i class="fa fa-angle-right"></i>
+                                    </span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- //column for post feeds -->
+        <div class="col-md-6">
+            <?php $arrays = [1,1,1,1,1,1]; ?>
+
+            <?php foreach ($arrays  as $array): ?>
+                <div class="box box-widget" style="border: 1px solid blue">
+                <div class="box-header with-border">
+                  <div class="user-block">
+                    <img class="img-circle" src="/site/images/gates.jpeg" alt="User Image">
+                    <span class="username"><a href="#">Jonathan Burke</a></span>
+                    <span class="description">AGTM Agent- Ukraine</span>
+                  </div>
+                  <!-- /.user-block -->
+                  <div class="box-tools">
+
+                    <button type="button" class="btn btn-box-tool" data-widget="remove">
+                        <i class="fa fa-ellipsis-h fa-2x text-black"></i>
+                    </button>
+                  </div>
+                  <!-- /.box-tools -->
+                </div>
+                <!-- /.box-header -->
+                <div class="box-body post-content">
+                  <!-- post text -->
+
+                    <strong>Far far away,</strong> behind the word mountains, far from the
+                    countries Vokalia and Consonantia, there live the blind
+                    texts. Separated they live in Bookmarksgrove right at
+
+                    <br><br>
+                    the coast of the Semantics, a large language ocean.
+                    A small river named Duden flows by their place and supplies
+                    it with the necessary regelialia. It is a paradisematic
+                    country, in which roasted parts of sentences fly into
+                    your mouth.
+
+                    <div class="post-image">
+                        <img src="/site/images/gates_an_friend.jpeg" alt="Post Image"
+                            class="post-img">
+                    </div>
+
+                  <!-- /.attachment-block -->
+
+                  <!-- Social sharing buttons -->
+                  <button type="button" class="btn btn-default btn-xs f-12">
+                      <i class="fa fa-share"></i> Share</button>
+                  <button type="button" class="btn btn-default btn-xs f-12">
+                      <i class="fa fa-thumbs-o-up"></i> Like</button>
+                  <span class="pull-right text-muted f-12">45 likes - 2 comments</span>
+                </div>
+                <!-- /.box-body -->
+                    <div class="box-footer box-comments f-14">
+                        <div class="box-comment">
+                        <!-- User image -->
+                            <img class="img-circle img-sm"
+                                src="/site/images/gates.jpeg" alt="User Image">
+
+                            <div class="comment-text">
+                                <span class="username">
+                                    Maria Gonzales
+                                    <span class="text-muted pull-right">8:03 PM Today</span>
+                                </span>
+
+                                It is a long established fact that a reader will be distracted
+                                by the readable content of a page when looking at its layout.
+                            </div>
+                        <!-- /.comment-text -->
+                        </div>
+                  <!-- /.box-comment -->
+                        <div class="box-comment f-14">
+                        <!-- User image -->
+                            <img class="img-circle img-sm"
+                                src="/site/images/gates.jpeg" alt="User Image">
+
+                            <div class="comment-text">
+                                <span class="username">
+                                    Nora Havisham
+                                    <span class="text-muted pull-right">8:03 PM Today</span>
+                                </span>
+
+                                The point of using Lorem Ipsum is that it has a more-or-less
+                                normal distribution of letters, as opposed to using
+                                'Content here, content here', making it look like readable English.
+                            </div>
+                        <!-- /.comment-text -->
+                        </div>
+                  <!-- /.box-comment -->
+                </div>
+                <!-- /.box-footer -->
+                <div class="box-footer">
+                    <form action="#" method="post" onsubmit="return false">
+                        <img class="img-responsive img-circle img-sm"
+                            src="/site/images/gates.jpeg" alt="Alt Text">
+                        <!-- .img-push is used to add margin to elements next to floating images -->
+                        <div class="img-push">
+                            <input type="text" class="form-control input-sm" placeholder="Press enter to post comment">
+                        </div>
+                    </form>
+                </div>
+                <!-- /.box-footer -->
+              </div>
+            <?php endforeach; ?>
+        </div>
+        <!-- end of column for feeds -->
+
+        <!-- column for lois -->
+        <div class="col-md-3">
+            <div class="row">
+                <div class="col-xs-6 mycard">
+                    <span class="card-text">
+                        <a href="#">
+                            LOIS
+                        </a>
+                    </span>
+                </div>
+
+                <div class="col-xs-6 mycard">
+                    <span class="card-text">
+                        <a href="#">
+                            SCO
+                        </a>
+                    </span>
+                </div>
+
+                <div class="col-xs-6 mycard">
+                    <span class="card-text">
+                        <a href="#">
+                            SELL OFFERS
+                        </a>
+                    </span>
+                </div>
+
+                <div class="col-xs-6 mycard">
+                    <span class="card-text">
+                        <a href="#">
+                            BUY OFFERS
+                        </a>
+                    </span>
+                </div>
+            </div>
+
+            <br>
+            <div class="row">
+                <div class="col-md-12">
                     <div class="block-title">
                         Buying Request
                     </div>
@@ -615,6 +951,16 @@ ul.block-list li
                             <?php endforeach; ?>
                         </ul>
                     </div>
+                </div>
+            </div>
+        </div>
+        <!-- end of column for lois -->
+
+
+        <div class="col-md-9">
+            <div class="row">
+                <div class="col-md-4">
+
                 </div>
 
                 <div class="col-md-4">
@@ -675,102 +1021,7 @@ ul.block-list li
     <br>
     <div class="row">
         <div class="col-md-6">
-            <div class="box box-widget" style="border: 1px solid blue">
-            <div class="box-header with-border">
-              <div class="user-block">
-                <img class="img-circle" src="/site/images/gates.jpeg" alt="User Image">
-                <span class="username"><a href="#">Jonathan Burke</a></span>
-                <span class="description">AGTM Agent- Ukraine</span>
-              </div>
-              <!-- /.user-block -->
-              <div class="box-tools">
 
-                <button type="button" class="btn btn-box-tool" data-widget="remove">
-                    <i class="fa fa-ellipsis-h fa-2x text-black"></i>
-                </button>
-              </div>
-              <!-- /.box-tools -->
-            </div>
-            <!-- /.box-header -->
-            <div class="box-body post-content">
-              <!-- post text -->
-
-                <strong>Far far away,</strong> behind the word mountains, far from the
-                countries Vokalia and Consonantia, there live the blind
-                texts. Separated they live in Bookmarksgrove right at
-
-                <br><br>
-                the coast of the Semantics, a large language ocean.
-                A small river named Duden flows by their place and supplies
-                it with the necessary regelialia. It is a paradisematic
-                country, in which roasted parts of sentences fly into
-                your mouth.
-
-                <div class="post-image">
-                    <img src="/site/images/gates_an_friend.jpeg" alt="Post Image"
-                        class="post-img">
-                </div>
-
-              <!-- /.attachment-block -->
-
-              <!-- Social sharing buttons -->
-              <button type="button" class="btn btn-default btn-xs f-12">
-                  <i class="fa fa-share"></i> Share</button>
-              <button type="button" class="btn btn-default btn-xs f-12">
-                  <i class="fa fa-thumbs-o-up"></i> Like</button>
-              <span class="pull-right text-muted f-12">45 likes - 2 comments</span>
-            </div>
-            <!-- /.box-body -->
-                <div class="box-footer box-comments f-14">
-                    <div class="box-comment">
-                    <!-- User image -->
-                        <img class="img-circle img-sm"
-                            src="/site/images/gates.jpeg" alt="User Image">
-
-                        <div class="comment-text">
-                            <span class="username">
-                                Maria Gonzales
-                                <span class="text-muted pull-right">8:03 PM Today</span>
-                            </span>
-
-                            It is a long established fact that a reader will be distracted
-                            by the readable content of a page when looking at its layout.
-                        </div>
-                    <!-- /.comment-text -->
-                    </div>
-              <!-- /.box-comment -->
-                    <div class="box-comment f-14">
-                    <!-- User image -->
-                        <img class="img-circle img-sm"
-                            src="/site/images/gates.jpeg" alt="User Image">
-
-                        <div class="comment-text">
-                            <span class="username">
-                                Nora Havisham
-                                <span class="text-muted pull-right">8:03 PM Today</span>
-                            </span>
-
-                            The point of using Lorem Ipsum is that it has a more-or-less
-                            normal distribution of letters, as opposed to using
-                            'Content here, content here', making it look like readable English.
-                        </div>
-                    <!-- /.comment-text -->
-                    </div>
-              <!-- /.box-comment -->
-            </div>
-            <!-- /.box-footer -->
-            <div class="box-footer">
-                <form action="#" method="post" onsubmit="return false">
-                    <img class="img-responsive img-circle img-sm"
-                        src="/site/images/gates.jpeg" alt="Alt Text">
-                    <!-- .img-push is used to add margin to elements next to floating images -->
-                    <div class="img-push">
-                        <input type="text" class="form-control input-sm" placeholder="Press enter to post comment">
-                    </div>
-                </form>
-            </div>
-            <!-- /.box-footer -->
-          </div>
         </div>
 
         <div class="col-md-6">

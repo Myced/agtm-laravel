@@ -8,6 +8,9 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/contact-us', 'HomeController@contact')->name('contact.us');
 Route::get('/exporters', 'HomeController@exporters')->name('exporters');
 
+//Route for the forum
+Route::get('/forum', 'ForumController@index')->name('forum');
+
 //view groups for front end links
 Route::group(['prefix' => 'agents'], function(){
     Route::get("/", 'AgentsController@index')->name('agents');
@@ -104,4 +107,9 @@ Route::group(['prefix' => 'admin'], function(){
         Route::post('/{id}/update', 'Admin\SubscriptionsController@update')->name('subscription.update');
         Route::get('/{id}/destroy', 'Admin\SubscriptionsController@destroy')->name('subscription.destroy');
     });
+});
+
+//user routes for his account
+Route::group(['prefix' => "user"], function(){
+    Route::get('/', 'UserController@index')->name('user.dashboard');
 });

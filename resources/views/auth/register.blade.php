@@ -6,6 +6,7 @@
 
 @section('styles')
 <link rel="stylesheet" href="/site/css/lib/select2.css">
+<link rel="stylesheet" href="/site/css/flat/blue.css">
 <style media="screen">
     .select2-container--default .select2-selection--single
     {
@@ -23,15 +24,19 @@
         text-align: right;
         font-weight: bold;
     }
+    .my-label {
+        cursor: pointer;
+    }
 </style>
 @endsection
 
 @section('content')
+<br>
 <div class="row">
     <div class="col-md-12">
         <div class="bg-white p-20">
             <h2 class="page-header">
-                <i class="gi gi-user_add"></i>
+                <i class="gi gi-user_add text-primary"></i>
                 User Registration
             </h2>
 
@@ -46,7 +51,9 @@
             </p>
 
             <br>
-            <form class="form-horizontal" action="index.html" method="post">
+            <form class="form-horizontal" action="{{ route('register') }}" method="post"
+                id="form" enctype="multipart/form-data">
+                @csrf
                 <div class="row">
                     <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
 
@@ -165,8 +172,8 @@
                             </label>
 
                             <div class="col-sm-8">
-                                <input type="text" name="email" class="form-control"
-                                    placeholder="email@domain.com" required>
+                                <input type="email" name="email" class="form-control"
+                                    placeholder="email@domain.com" required id="email">
                             </div>
                         </div>
 
@@ -182,11 +189,12 @@
 
                             <div class="col-sm-8">
                                 @foreach(\App\Models\AccountType::all() as $type)
-                                <div class="custom-control custom-checkbox my-1 mr-sm-2">
-                                    <input type="checkbox" class="custom-control-input" name="account_type"
-                                        id="type_{{ $type->id }}" value="{{ $type->id }}">
-                                    <label class="custom-control-label"
-                                        for="type_{{ $type->id }}">
+
+                                <div class="form-group">
+                                    <input type="checkbox" name="account_type[]"
+                                        class="flat-blue " value="{{ $type->id }}"
+                                        id="type_{{ $type->id }}">
+                                    <label for="type_{{ $type->id }}" class="control-label my-label">
                                         {{ $type->name }}
                                     </label>
                                 </div>
@@ -209,12 +217,58 @@
                         </div>
 
                     </div>
-                    <!-- end of row  -->
+                    <!-- end of column  -->
 
                 </div>
+                <!-- end of row -->
 
-                <div class="">
 
+                <div class="row">
+                    <div class="col-md-6">
+                        <h3 class="page-header">Account Information</h3>
+
+                        <div class="form-group row">
+                            <label class="col-sm-4 col-form-label">
+                                Email: <span class="required">*</span>
+                            </label>
+
+                            <div class="col-sm-8">
+                                <input type="text" class="form-control" id="email2"
+                                    placeholder="email@domain.com" readonly>
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label class="col-sm-4 col-form-label">
+                                Password: <span class="required">*</span>
+                            </label>
+
+                            <div class="col-sm-8">
+                                <input type="password" name="password" class="form-control"
+                                    placeholder="password" required id="password">
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label class="col-sm-4 col-form-label">
+                                Repeat Password: <span class="required">*</span>
+                            </label>
+
+                            <div class="col-sm-8">
+                                <input type="password" name="password_confirmation" class="form-control"
+                                    placeholder="Confirm Password" required id="rpassword">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-12 text-center">
+                        <button type="submit" name="button"
+                            class="btn btn-primary">
+                            <strong>Register</strong>
+                        </button>
+                    </div>
                 </div>
             </form>
         </div>
@@ -223,10 +277,17 @@
 @endsection
 
 @section('scripts')
+<script src="/site/js/icheck.min.js"></script>
 <script src="/site/js/lib/select2.min.js"></script>
 <script type="text/javascript">
     $(document).ready(function(){
         $('.select2').select2();
+
+        //Flat red color scheme for iCheck
+        $('input[type="checkbox"].flat-blue, input[type="radio"].flat-blue').iCheck({
+            checkboxClass: 'icheckbox_flat-blue',
+            radioClass   : 'iradio_flat-blue'
+        })
 
         function readURL(input) {
 
@@ -248,6 +309,27 @@
     $("#image").change(function() {
       readURL(this);
     });
+
+    //event to set account email address
+    $("#email").focusout(function(){
+        var email = $(this).val();
+
+        $("#email2").val(email);
+    })
+
+    //validate form submission here.
+    $("#form").submit(function(event){
+        var password = $("#password").val();
+        var rpassword = $("#rpassword").val();
+
+        if(password !== rpassword)
+        {
+            toastr.error("Your passwords do not match", "Error");
+            event.preventDefault();
+        }
+
+        return true;
+    })
 
     })
 </script>
