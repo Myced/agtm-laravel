@@ -9,7 +9,10 @@ Route::get('/contact-us', 'HomeController@contact')->name('contact.us');
 Route::get('/exporters', 'HomeController@exporters')->name('exporters');
 
 //Route for the forum
-Route::get('/forum', 'ForumController@index')->name('forum');
+Route::get('/forums', 'ForumController@index')->name('forum');
+Route::get('/forum/topic/new', 'ForumController@newTopic')->name('forum.new.topic');
+Route::post('/forum/topic/store', 'ForumController@storeTopic')->name('forum.topic.store');
+Route::get('/forum/topic/{slug}', 'ForumController@viewThread')->name('forum.topic');
 
 //view groups for front end links
 Route::group(['prefix' => 'agents'], function(){
