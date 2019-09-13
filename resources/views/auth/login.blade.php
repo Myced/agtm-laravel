@@ -1,57 +1,119 @@
-<html>
-    <head>
-        <title> AGTM - LOGIN </title>
+@extends('layouts.auth')
 
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta name="author" content="AGTM Team" />
-        <meta content="Online Trading Site, APEX GLOBAL TRADING AND MARKETTING" name="description" />
-        <meta name="keywords" content="AGTM, APEX GLOBAL TRADING AND MARKETING, a-gtm.com, www.a-gtm.com" />
+@section('title')
+     {{ _("Login") }}
+@endsection
 
+@section('style')
+    <link href="/site/css/toastr.min.css" rel="stylesheet" >
+@endsection
 
-        <link rel="shortcut icon" href="admin/assets/images/favicon.ico">
-        <link href="/site/css/toastr.min.css" rel="stylesheet" >
-        <link href="/site/css/bootstrap.css" rel="stylesheet" id="bootstrap-css">
-        <link rel="stylesheet" href="/site/css/font-awesome.css">
-        <link href="/site/css/login.css" rel="stylesheet">
-    </head>
+@section('content')
+<main>
 
-    <body>
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-6 col-md-4 col-md-offset-4">
-                    <h1 class="text-center login-title">AGTM - Sign In</h1>
-                    <div class="account-wall">
-                        <img class="profile-img" src="/site/images/photo.png"
-                             alt="">
-                        <form class="form-signin" method="POST" action="{{ route('login') }}">
-                            @csrf
-                            <input type="text" class="form-control" placeholder="Email" required autofocus
-                                    name="email">
-                            <br>
-                            <input type="password" class="form-control" placeholder="Password" required
-                                    name="password">
-                            <button class="btn btn-lg btn-primary btn-block" type="submit" name="login">
-                                Sign in</button>
+    <div class="layout">
 
-                            <br>
-                            <label class="checkbox pull-left">
-                                <input type="checkbox" value="1" name="remember">
-                                Remember me
-                            </label>
-                            <br>
-                            <br>
+        <!-- Start of Sign In -->
 
-                            <a href="{{ route('home') }}" class="pull-left need-help"> <i class="fa fa-home"></i> Home </a>
-                            <a href="{{ route('register') }}" class="pull-right need-help">Register </a><span class="clearfix"></span>
-                        </form>
+        <div class="sign-bg">
+
+            <div class="start">
+
+                <div class="container">
+
+                    <div class="row">
+
+                        <div class="col-lg-4 col-md-6">
+
+                            <div class="register-content">
+
+                                <div class="login-header">
+
+                                    <div class="logo">
+
+                                        <img src="/chatt/img/logo2.png" alt="">
+
+                                    </div>
+
+                                    <h1><i class="ti-key"></i>Sign in</h1>
+
+                                </div>
+
+                                <form class="login-up" method="post" action="{{ route('login') }}">
+                                    @csrf
+
+                                    <div class="form-group">
+
+                                        <input type="email" class="form-control" placeholder="Email Address"
+                                            name="email" required>
+
+                                        <button class="btn icon" type="button"><i class="ti-email"></i></button>
+
+                                    </div>
+
+                                    <div class="form-group">
+
+                                        <input type="password" class="form-control" placeholder="Password"
+                                            name="password" required>
+
+                                        <button class="btn icon" type="button"><i class="ti-lock"></i></button>
+
+                                    </div>
+
+                                    <button type="submit" class="btn button" >Sign In</button>
+
+                                    <div class="callout">
+
+                                        <span>Sign in with</span>
+
+                                        <ul>
+
+                                            <li><a href="#" title="" class="facebook"><i class="ti-facebook"></i></a></li>
+
+                                            <li><a href="#" title="" class="twitter"><i class="ti-twitter"></i></a></li>
+
+                                            <li><a href="#" title="" class="google"><i class="ti-google"></i></a></li>
+
+                                        </ul>
+
+                                        <span>Don't have account? <a href="{{ route('register') }}">Create Account</a></span>
+
+                                    </div>
+
+                                </form>
+
+                            </div>
+
+                        </div>
+
+                        <div class="col-lg-8 col-md-6">
+
+                            <div class="page-meta">
+
+                                <h2>AGTM - Sign In to enjoy the services we offer</h2>
+
+                                <span>login now and enjoy!</span>
+
+                            </div>
+
+                        </div>
+
                     </div>
-                </div>
-            </div>
-        </div>
-    </body>
 
-    <script src="/site/js/jquery.js"></script>
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- End of Sign In -->
+
+    </div>
+
+</main>
+@endsection
+
+@section('scripts')
     <script src="/site/js/toastr.min.js"></script>
     @include("includes.site.notification")
-</html>
+@endsection

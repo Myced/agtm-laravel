@@ -14,6 +14,12 @@ Route::get('/forum/topic/new', 'ForumController@newTopic')->name('forum.new.topi
 Route::post('/forum/topic/store', 'ForumController@storeTopic')->name('forum.topic.store');
 Route::get('/forum/topic/{slug}', 'ForumController@viewThread')->name('forum.topic');
 
+//Routes for chat
+Route::get('/chats', 'ChatController@index')->name('chat');
+Route::get('/chat/room', 'ChatController@chatRoom')->name('chat.room');
+
+Route::post('/post/report', 'PostController@report_post')->name('post.report');
+
 //view groups for front end links
 Route::group(['prefix' => 'agents'], function(){
     Route::get("/", 'AgentsController@index')->name('agents');

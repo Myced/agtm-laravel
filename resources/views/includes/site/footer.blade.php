@@ -40,7 +40,8 @@
             </div>
 
             <div class="col-xs-12 col-md-4">
-                <form action="" method="post">
+                <form action="{{ route('subscription.store') }}" method="post">
+                    @csrf
                     <div class="input-group ">
                         <input type="email" class="form-control" name="subscribe" placeholder="Subscribe to our NewsLetter" required>
                           <span class="input-group-btn">

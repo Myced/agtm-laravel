@@ -1,8 +1,8 @@
 <div class="navigation">
-   <nav class="">
+   <nav class="mynav nav-shadow">
 
        <!-- Collection of nav links and other content for toggling -->
-       <div class="" id="navbar">
+       <div class="mynav" id="navbar">
            <!-- Mobile menu toggle button (hamburger/x icon) -->
            <input id="main-menu-state" type="checkbox" />
            <label class="main-menu-btn" for="main-menu-state">
@@ -15,7 +15,7 @@
              <li><a href="#">Field Agent</a>
                <ul>
                  <li>
-                     <a href="{{ route('agents.request') }}">Looking for a Field Agent</a>
+                     <a href="{{ route('agents.request') }}">Looking for Field Agents</a>
                  </li>
                  <li>
                      <a href="{{ route('agents') }}">View Available Agents</a>
@@ -29,11 +29,13 @@
                  <a href="#">Mandates</a>
                  <ul>
                      <li>
-                         <a href="{{ route('mandates.request') }}">Looking for a Mandate, Sourcing agent</a>
+                         <a href="{{ route('mandates.request') }}">
+                             Looking for a Mandate, Sourcing Agent
+                         </a>
                      </li>
 
                      <li>
-                         <a href="#">View All Agent | Sourcing Agents</a>
+                         <a href="#">View All Mandates | Sourcing Agents</a>
                      </li>
 
                      <li>
@@ -89,6 +91,12 @@
                          <a href="#">Looking for LOI</a>
                      </li>
                  </ul>
+             </li>
+
+             <li class="">
+                 <a href="{{ route('forum') }}">
+                     Forum
+                 </a>
              </li>
 
              @auth

@@ -26,8 +26,6 @@
         <div class="row" style="margin-top: 15px;">
             <div class="col-lg-8 col-md-8">
 
-
-
                 <!-- POST -->
                 <div class="post">
                     <form action="{{ route('forum.topic.store') }}" class="form newtopic" method="post">

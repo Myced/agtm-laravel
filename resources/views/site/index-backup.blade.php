@@ -9,7 +9,6 @@
 <link rel="stylesheet" href="/site/css/lib/chosen.min.css">
 
 <style media="screen">
-
    .slick-prev,
    .slick-next {
     font-size: 0;
@@ -209,7 +208,6 @@ input.search-info:focus
   border: 2px solid #ff7519;
   border-left: none;
   width: 460px;
-  outline: none;
 }
 
 
@@ -326,11 +324,6 @@ input.search-info:focus
 
 .card button:hover {
   opacity: 0.7;
-}
-
-.full-height
-{
-    height: 100%;
 }
 
 .m-t-5
@@ -525,81 +518,11 @@ ul.block-list li
 {
     z-index: 1030;
 }
-
-.m-t-10
-{
-    margin-top: 20px;
-}
-
-.nav-shadow
-{
-    /* box-shadow: -1px 4px 2px 2px black; */
-}
-
-.bg-silver
-{
-    background-color: silver;
-}
-
-.pdt
-{
-    margin: 5px;
-    background: #fff;
-    padding: 10px;
-}
-
-.image-container
-{
-    width: 100%;
-}
-
-.pdt-image
-{
-    width: 100%;
-    height: 150px;
-}
-
-.pdt-name
-{
-    margin-top: 10px;
-    font-size: 15px;
-    color: #666;
-}
-
-.price-row
-{
-    margin-top: 10px;
-    color: #555;
-}
-
-.pdt-price{
-    font-size: 17px;
-    font-weight: bold;
-}
-
-.block-title
-{
-    color: #eb301b;
-}
-
-.agtm-item
-{
-    padding: 10px 2px;
-    color: #111;
-    display: block;
-}
-
-.agtm-item:hover,
-.agtm-item:focus
-{
-    color: #111;
-    background: #f2f2f2;
-}
 </style>
 @endsection
 
 @section('content')
-<div class="bg-white p-20 m-t-10">
+<div class="bg-white p-20">
 
     <div class="row">
         <div class="col-md-7">
@@ -645,6 +568,30 @@ ul.block-list li
                 </div>
             </div>
 
+            <div class="group group-protection">
+                <div class="m-icon">
+                    <img src="/site/images/protection.svg" alt="User" class="nav-icon">
+                </div>
+                <div class="menu-content">
+                    <a href="#">
+                        Order
+                        <br>
+                        Protection
+                    </a>
+                </div>
+            </div>
+
+            <div class="group group-favourite">
+                <div class="m-icon">
+                    <img src="/site/images/heart.svg" alt="User" class="nav-icon">
+                </div>
+                <div class="menu-content">
+                    <a href="#">
+                        <br>
+                        Favourites
+                    </a>
+                </div>
+            </div>
         </div>
         <!-- end of column -->
     </div>
@@ -652,17 +599,7 @@ ul.block-list li
     <br>
     <div class="row">
         <div class="col-md-2">
-            <div class="row">
-                <div class="col-xs-12 mycard full-height">
-                    <span class="card-text">
-                        <a href="{{ route('chat') }}">
-                            Join Our
-                            <br>
-                            Chat
-                        </a>
-                    </span>
-                </div>
-            </div>
+            <h3>Join Chat</h3>
         </div>
 
         <div class="col-md-8">
@@ -672,8 +609,6 @@ ul.block-list li
                         <li data-target="#mycarousel" data-slide-to="0" class="active"></li>
                         <li data-target="#mycarousel" data-slide-to="1"></li>
                         <li data-target="#mycarousel" data-slide-to="2"></li>
-                        <li data-target="#mycarousel" data-slide-to="3"></li>
-                        <li data-target="#mycarousel" data-slide-to="4"></li>
                     </ol>
 
                     <div class="carousel-inner">
@@ -686,14 +621,6 @@ ul.block-list li
 
                         <div class="item">
                             <img class="d-block w-100" src="site/images/slide_3.jpg" alt="Third slide">
-                        </div>
-
-                        <div class="item">
-                            <img class="d-block w-100" src="site/images/slide_3.jpg" alt="Fourth slide">
-                        </div>
-
-                        <div class="item">
-                            <img class="d-block w-100" src="/site/images/slide_2.jpg" alt="Fifth slide">
                         </div>
                     </div>
 
@@ -710,23 +637,12 @@ ul.block-list li
             </div>
         </div>
         <div class="col-md-2">
-            <div class="row">
-                <div class="col-xs-12 mycard full-height">
-                    <span class="card-text">
-                        <a href="{{ route('forum') }}">
-                            Join Our
-                            <br>
-                            Forum
-                        </a>
-                    </span>
-                </div>
-            </div>
+            <h3>Join Forum</h3>
         </div>
     </div>
 
-    <br>
-    <div class="row">
-        <div class="col-md-2-5">
+    <div class="row" style="margin-top: 30px;">
+        <div class="col-md-3">
 
             <!-- //create first row for categories -->
             <div class="row">
@@ -739,20 +655,16 @@ ul.block-list li
                     </div>
 
                     <div class="cat-body">
-                        <ul class="cat-list slimscroll">
-                            @foreach($categories as $category)
-                                <li>
-                                    <a href="#">
-                                        {{ $category->name }}
-                                        <span class="cat-icon">
-                                            <i class="fa fa-angle-right"></i>
-                                        </span>
-                                    </a>
-                                </li>
-                            @endforeach
-
-
-                            <!-- <li>
+                        <ul class="cat-list">
+                            <li>
+                                <a href="#">
+                                    Cooking Oil
+                                    <span class="cat-icon">
+                                        <i class="fa fa-angle-right"></i>
+                                    </span>
+                                </a>
+                            </li>
+                            <li>
                                 <a href="#">
                                     Agriculture
                                     <span class="cat-icon">
@@ -772,9 +684,39 @@ ul.block-list li
                                         </li>
                                     </ul>
                                 </div>
-                            </li> -->
-
-
+                            </li>
+                            <li>
+                                <a href="#">
+                                    Electronics
+                                    <span class="cat-icon">
+                                        <i class="fa fa-angle-right"></i>
+                                    </span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    Dairy
+                                    <span class="cat-icon">
+                                        <i class="fa fa-angle-right"></i>
+                                    </span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    Spices
+                                    <span class="cat-icon">
+                                        <i class="fa fa-angle-right"></i>
+                                    </span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    Computer
+                                    <span class="cat-icon">
+                                        <i class="fa fa-angle-right"></i>
+                                    </span>
+                                </a>
+                            </li>
                         </ul>
                     </div>
                 </div>
@@ -791,72 +733,55 @@ ul.block-list li
                     </div>
 
                     <div class="chat-body">
-                        <ul class="chat-list slimscroll">
-                            @foreach($categories as $category)
-                                <li>
-                                    <a href="{{ route('chat') }}">
-                                        {{ $category->name }} Chat
-                                        <span class="cat-icon">
-                                            <i class="fa fa-angle-right"></i>
-                                        </span>
-                                    </a>
-                                </li>
-                            @endforeach
-                        </ul>
-                    </div>
-                </div>
-            </div>
-
-            <br>
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="block-title">
-                        Available SCO, FCO
-                    </div>
-
-                    <div class="block-content vticker" >
-                        <ul class="block-list ">
-                            <?php $counts = [1,2,2,3,3]; ?>
-                            <?php foreach ($counts as $count): ?>
-                                <li>
-                                    <a href="#" class="block">
-                                        <span class="flag">
-                                            <img src="/site/images/countries/us.svg" alt="Flag"
-                                                class="block-image">
-                                        </span>
-
-                                        LOI for Chicken
-                                    </a>
-                                </li>
-                            <?php endforeach; ?>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-
-            <br>
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="block-title">
-                        Looking for Business Partners /
-                        Looking for an Investor
-                    </div>
-
-                    <div class="block-content vticker" >
-                        <ul class="block-list">
-                            <?php $counts = [1,2,2,3,3]; ?>
-                            <?php foreach ($counts as $count): ?>
-                                <li>
-                                    <a href="#" class="block">
-                                        <span class="flag">
-                                            <img src="/site/images/countries/us.svg" alt="Flag"
-                                                class="block-image">
-                                        </span>
-
-                                        LOI for Chicken
-                                    </a>
-                                </li>
-                            <?php endforeach; ?>
+                        <ul class="chat-list">
+                            <li>
+                                <a href="#">
+                                    LOI Chats
+                                    <span class="chat-icon">
+                                        <i class="fa fa-angle-right"></i>
+                                    </span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    Agricultural Products
+                                    <span class="chat-icon">
+                                        <i class="fa fa-angle-right"></i>
+                                    </span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    Electronics & Telephones
+                                    <span class="chat-icon">
+                                        <i class="fa fa-angle-right"></i>
+                                    </span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    Dairy Chat
+                                    <span class="chat-icon">
+                                        <i class="fa fa-angle-right"></i>
+                                    </span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    Spices Chat
+                                    <span class="chat-icon">
+                                        <i class="fa fa-angle-right"></i>
+                                    </span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    Computer Chat
+                                    <span class="chat-icon">
+                                        <i class="fa fa-angle-right"></i>
+                                    </span>
+                                </a>
+                            </li>
                         </ul>
                     </div>
                 </div>
@@ -865,8 +790,8 @@ ul.block-list li
         </div>
 
         <!-- //column for post feeds -->
-        <div class="col-md-5">
-            <?php $arrays = [1,1,1,1]; ?>
+        <div class="col-md-6">
+            <?php $arrays = [1,1,1,1,1,1]; ?>
 
             <?php foreach ($arrays  as $array): ?>
                 <div class="box box-widget" style="border: 1px solid blue">
@@ -879,18 +804,9 @@ ul.block-list li
                   <!-- /.user-block -->
                   <div class="box-tools">
 
-                    <button type="button" class="btn btn-box-tool"
-                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <button type="button" class="btn btn-box-tool" data-widget="remove">
                         <i class="fa fa-ellipsis-h fa-2x text-black"></i>
                     </button>
-
-                    <div class="dropdown-menu agt-drop" aria-labelledby="dropdownMenuButton"
-                        style="border: 1px solid silver; padding: 5px;">
-                        <a class="dropdown-item agtm-item" href="#" data-toggle="modal">Flag Post</a>
-                        <a class="dropdown-item agtm-item" href="#report-modal" data-toggle="modal">
-                            Report Post
-                        </a>
-                    </div>
                   </div>
                   <!-- /.box-tools -->
                 </div>
@@ -979,15 +895,83 @@ ul.block-list li
         <!-- end of column for feeds -->
 
         <!-- column for lois -->
-        <div class="col-md-4-5">
-
+        <div class="col-md-3">
             <div class="row">
-                <div class="col-md-8">
+                <div class="col-xs-6 mycard">
+                    <span class="card-text">
+                        <a href="#">
+                            LOIS
+                        </a>
+                    </span>
+                </div>
+
+                <div class="col-xs-6 mycard">
+                    <span class="card-text">
+                        <a href="#">
+                            SCO
+                        </a>
+                    </span>
+                </div>
+
+                <div class="col-xs-6 mycard">
+                    <span class="card-text">
+                        <a href="#">
+                            SELL OFFERS
+                        </a>
+                    </span>
+                </div>
+
+                <div class="col-xs-6 mycard">
+                    <span class="card-text">
+                        <a href="#">
+                            BUY OFFERS
+                        </a>
+                    </span>
+                </div>
+            </div>
+
+            <br>
+            <div class="row">
+                <div class="col-md-12">
                     <div class="block-title">
-                        SELL OFFERS
+                        Buying Request
                     </div>
 
-                    <div class="block-content vticker" >
+                    <div class="block-content" >
+                        <ul class="block-list">
+                            <?php $counts = [1,2,2,3,3]; ?>
+                            <?php foreach ($counts as $count): ?>
+                                <li>
+                                    <a href="#" class="block">
+                                        <span class="flag">
+                                            <img src="/site/images/countries/cm.svg" alt="Flag"
+                                                class="block-image">
+                                        </span>
+
+                                        Crapp Iron - Cameroon
+                                    </a>
+                                </li>
+                            <?php endforeach; ?>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- end of column for lois -->
+
+
+        <div class="col-md-9">
+            <div class="row">
+                <div class="col-md-4">
+
+                </div>
+
+                <div class="col-md-4">
+                    <div class="block-title">
+                        Selling Request
+                    </div>
+
+                    <div class="block-content" >
                         <ul class="block-list">
                             <?php $counts = [1,2,2,3,3]; ?>
                             <?php foreach ($counts as $count): ?>
@@ -1005,139 +989,72 @@ ul.block-list li
                         </ul>
                     </div>
                 </div>
-            </div>
 
-            <br>
-            <div class="row">
-                <div class="col-md-8">
+                <div class="col-md-4">
                     <div class="block-title">
-                        Buy Offers
+                        Available LOIs
                     </div>
 
-                    <div class="block-content vticker" >
+                    <div class="block-content" >
                         <ul class="block-list">
                             <?php $counts = [1,2,2,3,3]; ?>
                             <?php foreach ($counts as $count): ?>
                                 <li>
                                     <a href="#" class="block">
                                         <span class="flag">
-                                            <img src="/site/images/countries/cm.svg" alt="Flag"
+                                            <img src="/site/images/countries/us.svg" alt="Flag"
                                                 class="block-image">
                                         </span>
 
-                                        Crapp Iron - Cameroon
+                                        LOI for Chicken
                                     </a>
                                 </li>
                             <?php endforeach; ?>
                         </ul>
                     </div>
                 </div>
-            </div>
-
-            <br>
-            <div class="row">
-                <div class="col-md-8">
-                    <div class="block-title">
-                        Available LOI, ICPO
-                    </div>
-
-                    <div class="block-content vticker" >
-                        <ul class="block-list">
-                            <?php $counts = [1,2,2,3,3]; ?>
-                            <?php foreach ($counts as $count): ?>
-                                <li>
-                                    <a href="#" class="block">
-                                        <span class="flag">
-                                            <img src="/site/images/countries/cm.svg" alt="Flag"
-                                                class="block-image">
-                                        </span>
-
-                                        Crapp Iron - Cameroon
-                                    </a>
-                                </li>
-                            <?php endforeach; ?>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-
-            <br>
-            <div class="bg-silver">
-
-                @for($j = 0; $j < 3; $j++)
-                <div class="row slick">
-                    <!-- product -->
-                    @for($i = 1; $i < 7; $i++)
-                        <div class="col-md-6">
-                            <div class="pdt">
-                                <div class="image-container">
-                                    <img src="/uploads/products/20180911120918_used cooking oil 1.jpg"
-                                        alt="" class="pdt-image">
-                                </div>
-
-                                <div class="pdt-name">
-                                    Coper Ore, coper concerntrate 25%
-                                </div>
-
-                                <div class="price-row">
-                                    <span class="pdt-price">
-                                        US$400.00
-                                    </span>/ Metric Ton
-
-                                    <br>
-                                    100 tons (Min order)
-                                </div>
-                            </div>
-                        </div>
-                    @endfor
-                    <!-- end of product -->
-                </div>
-                @endfor
 
             </div>
+
+
         </div>
-        <!-- end of column for lois -->
-
     </div>
 
+
+    <br>
+    <div class="row">
+        <div class="col-md-6">
+
+        </div>
+
+        <div class="col-md-6">
+            <div class="row">
+                <?php
+                for ($i=0; $i < 4 ; $i++) {
+                    ?>
+                    <div class="col-md-6 m-t-5">
+                        <div class="card">
+                            <img src="/site/images/metal.jpg" alt="Denim Jeans" style="width:100%">
+
+                            <h2>Scrap Iron</h2>
+                            <p class="price">$19.99</p>
+                            <p>
+                                Short Description of scrap iron
+                            </p>
+                            <p><button>Details</button></p>
+                        </div>
+
+                    </div>
+                    <?php
+                }
+                    ?>
+            </div>
+        </div>
+    </div>
 
     <!-- row to cotain the categories, confirm loi and co -->
 
 </div>
-
-<!-- //modal to report an item  -->
-<form class="" action="{{ route('post.report') }}" method="post">
-    @csrf
-    <div class="modal" tabindex="-1" role="dialog" id="report-modal">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h3 class="box-title">Report a Post</h3>
-
-                    <button type="button" class="close float-right" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-
-                <div class="modal-body">
-                    <p> Please state the reason you are reporting this post here.</p>
-                    <div class="row">
-                        <div class="col-md-12">
-                            <textarea name="reason" rows="8" class="form-control"
-                                placeholder="Enter message here" required></textarea>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="modal-footer">
-                    <button type="submit" class="btn btn-primary">Report</button>
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                </div>
-            </div>
-        </div>
-    </div>
-</form>
-
 @endsection
 
 @section('scripts')
@@ -1151,36 +1068,6 @@ ul.block-list li
     //initialise chosen js here
     $(document).ready(function(){
         $(".chosen-select").chosen({disable_search_threshold: 10});
-
-        //initialise slimscroll and easyticker
-        $(".slimscroll").slimscroll({
-            height: '250px'
-        });
-
-        $('.vticker').easyTicker({
-           direction: 'up',
-           easing: 'easeInOutBack',
-           speed: 'slow',
-           interval: 4000,
-           height: 'auto',
-           visible: 5,
-           mousePause: 0,
-           controls: {
-               up: '.up',
-               down: '.down',
-               toggle: '.toggle',
-               stopText: 'Stop !!!'
-           }
-       }).data('easyTicker');
-
-       //slick the products
-        $('.slick').slick({
-          slidesToShow: 2,
-          slidesToScroll: 1,
-          autoplay: true,
-          autoplaySpeed: 2000,
-        });
-
     })
 </script>
 @endsection

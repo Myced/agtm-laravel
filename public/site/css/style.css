@@ -25,6 +25,7 @@ nav
 .sticky {
   position: fixed;
   top: 0;
+  left: 0;
   width: 100%;
 }
 
@@ -536,4 +537,53 @@ footer
   height: 6px;
   border-radius: 50%;
   background: white;
+}
+
+/* custom grids for bootstrap css */
+.col-md-2-5
+{
+    position: relative;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+@media (min-width: 992px) {
+    .col-md-2-5
+    {
+        width: 20.83333%;
+        float: left;
+    }
+}
+
+.col-md-2-25
+{
+    position: relative;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+@media (min-width: 992px) {
+    .col-md-2-25
+    {
+        width: 18.75%;
+        float: left;
+    }
+}
+
+.col-md-4-5
+{
+    position: relative;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+@media (min-width: 992px) {
+    .col-md-4-5
+    {
+        width: 37.5%;
+        float: left;
+    }
 }
