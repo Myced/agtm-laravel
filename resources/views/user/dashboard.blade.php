@@ -1,7 +1,7 @@
 @extends('layouts.user')
 
 @section('title')
-    {{ __("Dashboard") }}
+    {{ __("User Dashboard") }}
 @endsection
 
 @section('content')
@@ -9,7 +9,7 @@
 <!-- START cards box-->
 <div class="row">
 
-    <div class="col-xl-4 col-md-6">
+    <div class="col-xl-3 col-md-6">
       <!-- START card-->
       <div class="card flex-row align-items-center align-items-stretch border-0">
         <div class="col-3 d-flex align-items-center bg-primary-dark justify-content-center rounded-left">
@@ -24,7 +24,7 @@
       </div>
     </div>
 
-  <div class="col-xl-2 col-md-6">
+  <div class="col-xl-3 col-md-6">
     <!-- START card-->
     <div class="card flex-row align-items-center align-items-stretch border-0">
       <div class="col-4 d-flex align-items-center bg-purple-dark justify-content-center rounded-left">

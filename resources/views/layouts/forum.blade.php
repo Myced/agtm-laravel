@@ -21,6 +21,21 @@
 
         <!-- SLIDER REVOLUTION 4.x CSS SETTINGS -->
         <link rel="stylesheet" type="text/css" href="/forum_files/rs-plugin/css/settings.css" media="screen" />
+        <style media="screen">
+            .forum-home
+            {
+                font-family: serif;
+                color: #384feb;
+                font-size: 20px;
+                margin-left: 10px;
+                font-weight: bold;
+            }
+
+            .forum-home:hover
+            {
+                color: #6c7ce7;
+            }
+        </style>
 
     </head>
     <body>
@@ -30,15 +45,15 @@
             <!-- Slider -->
             <div class="tp-banner-container">
                 <div class="tp-banner" >
-                    <ul>
-                        <!-- SLIDE  -->
+                    <!-- <ul>
+
                         <li data-transition="fade" data-slotamount="7" data-masterspeed="1500" >
-                            <!-- MAIN IMAGE -->
+
                             <img src="images/slide.jpg"  alt="slidebg1"
                                 data-bgfit="cover" data-bgposition="left top" data-bgrepeat="no-repeat">
-                            <!-- LAYERS -->
+
                         </li>
-                    </ul>
+                    </ul> -->
                 </div>
             </div>
             <!-- //Slider -->
@@ -49,13 +64,15 @@
                         <div class="col-lg-1 col-xs-3 col-sm-2 col-md-2 logo "><a href="index-2.html"><img src="images/logo.jpg" alt=""  /></a></div>
                         <div class="col-lg-3 col-xs-9 col-sm-5 col-md-3 selecttopic">
                             <div class="dropdown">
-                                <a data-toggle="dropdown" href="#" >Borderlands 2</a> <b class="caret"></b>
-                                <ul class="dropdown-menu" role="menu">
-                                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Borderlands 1</a></li>
-                                    <li role="presentation"><a role="menuitem" tabindex="-2" href="#">Borderlands 2</a></li>
-                                    <li role="presentation"><a role="menuitem" tabindex="-3" href="#">Borderlands 3</a></li>
+                                <a  href="/" >
+                                    <img alt="" src="/site/images/logo_nam.png">
+                                </a>
 
-                                </ul>
+                                <a href="{{ route('forum') }}" class="forum-home">
+                                    <i class="fa fa-home"></i>
+                                    Forum Home
+                                </a>
+
                             </div>
                         </div>
                         <div class="col-lg-4 search hidden-xs hidden-sm col-md-3">

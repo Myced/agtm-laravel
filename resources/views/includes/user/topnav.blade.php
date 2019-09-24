@@ -1,12 +1,12 @@
 <nav class="navbar topnavbar">
   <!-- START navbar header-->
   <div class="navbar-header">
-    <a class="navbar-brand" href="{{ route('user.dashboard') }}">
+    <a class="navbar-brand" href="/">
       <div class="brand-logo">
-        <img class="img-fluid" src="/userfiles/img/gen_logo.png" alt="App Logo">
+        <img class="img-fluid" src="/site/images/logo_nam.png" alt="App Logo">
       </div>
       <div class="brand-logo-collapsed">
-        <img class="img-fluid" src="/userfiles/img/GEN_Tree.png" alt="App Logo">
+        <img class="img-fluid" src="/site/images/logo_nam.png" alt="App Logo">
       </div>
     </a>
   </div>
@@ -15,11 +15,13 @@
   <ul class="navbar-nav mr-auto flex-row">
     <li class="nav-item">
       <!-- Button used to collapse the left sidebar. Only visible on tablet and desktops-->
-      <a class="nav-link d-none d-md-block d-lg-block d-xl-block" href="#" data-trigger-resize="" data-toggle-state="aside-collapsed">
+      <a class="nav-link d-none d-md-block d-lg-block d-xl-block" href="#"
+        data-trigger-resize="" data-toggle-state="aside-collapsed">
         <em class="fas fa-bars"></em>
       </a>
       <!-- Button to show/hide the sidebar on mobile. Visible on mobile only.-->
-      <a class="nav-link sidebar-toggle d-md-none" href="#" data-toggle-state="aside-toggled" data-no-persist="true">
+      <a class="nav-link sidebar-toggle d-md-none" href="#"
+        data-toggle-state="aside-toggled" data-no-persist="true">
         <em class="fas fa-bars"></em>
       </a>
     </li>

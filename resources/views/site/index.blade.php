@@ -521,11 +521,6 @@ ul.block-list li
     text-align: left;
 }
 
-.mynav
-{
-    z-index: 1030;
-}
-
 .m-t-10
 {
     margin-top: 20px;
@@ -659,6 +654,16 @@ ul.block-list li
                             Join Our
                             <br>
                             Chat
+                        </a>
+                    </span>
+                </div>
+
+                <div class="col-xs-12 mycard full-height">
+                    <span class="card-text">
+                        <a href="{{ route('consultant.talk') }}">
+                            Talk To
+                            <br>
+                            Consultant
                         </a>
                     </span>
                 </div>
@@ -866,115 +871,120 @@ ul.block-list li
 
         <!-- //column for post feeds -->
         <div class="col-md-5">
-            <?php $arrays = [1,1,1,1]; ?>
+            <div class="slim-posts">
 
-            <?php foreach ($arrays  as $array): ?>
-                <div class="box box-widget" style="border: 1px solid blue">
-                <div class="box-header with-border">
-                  <div class="user-block">
-                    <img class="img-circle" src="/site/images/gates.jpeg" alt="User Image">
-                    <span class="username"><a href="#">Jonathan Burke</a></span>
-                    <span class="description">AGTM Agent- Ukraine</span>
-                  </div>
-                  <!-- /.user-block -->
-                  <div class="box-tools">
+                <?php $arrays = [1,1,1,1]; ?>
 
-                    <button type="button" class="btn btn-box-tool"
-                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        <i class="fa fa-ellipsis-h fa-2x text-black"></i>
-                    </button>
+                <?php foreach ($arrays  as $array): ?>
+                    <div class="box box-widget" style="border: 1px solid blue">
+                    <div class="box-header with-border">
+                      <div class="user-block">
+                        <img class="img-circle" src="/site/images/gates.jpeg" alt="User Image">
+                        <span class="username"><a href="#">Jonathan Burke</a></span>
+                        <span class="description">AGTM Agent- Ukraine</span>
+                      </div>
+                      <!-- /.user-block -->
+                      <div class="box-tools">
 
-                    <div class="dropdown-menu agt-drop" aria-labelledby="dropdownMenuButton"
-                        style="border: 1px solid silver; padding: 5px;">
-                        <a class="dropdown-item agtm-item" href="#" data-toggle="modal">Flag Post</a>
-                        <a class="dropdown-item agtm-item" href="#report-modal" data-toggle="modal">
-                            Report Post
-                        </a>
+                        <button type="button" class="btn btn-box-tool"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="fa fa-ellipsis-h fa-2x text-black"></i>
+                        </button>
+
+                        <div class="dropdown-menu agt-drop" aria-labelledby="dropdownMenuButton"
+                            style="border: 1px solid silver; padding: 5px;">
+                            <a class="dropdown-item agtm-item" href="#" data-toggle="modal">Flag Post</a>
+                            <a class="dropdown-item agtm-item" href="#report-modal" data-toggle="modal">
+                                Report Post
+                            </a>
+                        </div>
+                      </div>
+                      <!-- /.box-tools -->
                     </div>
-                  </div>
-                  <!-- /.box-tools -->
-                </div>
-                <!-- /.box-header -->
-                <div class="box-body post-content">
-                  <!-- post text -->
+                    <!-- /.box-header -->
+                    <div class="box-body post-content">
+                      <!-- post text -->
 
-                    <strong>Far far away,</strong> behind the word mountains, far from the
-                    countries Vokalia and Consonantia, there live the blind
-                    texts. Separated they live in Bookmarksgrove right at
+                        <strong>Far far away,</strong> behind the word mountains, far from the
+                        countries Vokalia and Consonantia, there live the blind
+                        texts. Separated they live in Bookmarksgrove right at
 
-                    <br><br>
-                    the coast of the Semantics, a large language ocean.
-                    A small river named Duden flows by their place and supplies
-                    it with the necessary regelialia. It is a paradisematic
-                    country, in which roasted parts of sentences fly into
-                    your mouth.
+                        <br><br>
+                        the coast of the Semantics, a large language ocean.
+                        A small river named Duden flows by their place and supplies
+                        it with the necessary regelialia. It is a paradisematic
+                        country, in which roasted parts of sentences fly into
+                        your mouth.
 
-                    <div class="post-image">
-                        <img src="/site/images/gates_an_friend.jpeg" alt="Post Image"
-                            class="post-img">
+                        <div class="post-image">
+                            <img src="/site/images/gates_an_friend.jpeg" alt="Post Image"
+                                class="post-img">
+                        </div>
+
+                      <!-- /.attachment-block -->
+
+                      <!-- Social sharing buttons -->
+                      <button type="button" class="btn btn-default btn-xs f-12">
+                          <i class="fa fa-share"></i> Share</button>
+                      <button type="button" class="btn btn-default btn-xs f-12">
+                          <i class="fa fa-thumbs-o-up"></i> Like</button>
+                      <span class="pull-right text-muted f-12">45 likes - 2 comments</span>
                     </div>
+                    <!-- /.box-body -->
+                        <div class="box-footer box-comments f-14">
+                            <div class="box-comment">
+                            <!-- User image -->
+                                <img class="img-circle img-sm"
+                                    src="/site/images/gates.jpeg" alt="User Image">
 
-                  <!-- /.attachment-block -->
+                                <div class="comment-text">
+                                    <span class="username">
+                                        Maria Gonzales
+                                        <span class="text-muted pull-right">8:03 PM Today</span>
+                                    </span>
 
-                  <!-- Social sharing buttons -->
-                  <button type="button" class="btn btn-default btn-xs f-12">
-                      <i class="fa fa-share"></i> Share</button>
-                  <button type="button" class="btn btn-default btn-xs f-12">
-                      <i class="fa fa-thumbs-o-up"></i> Like</button>
-                  <span class="pull-right text-muted f-12">45 likes - 2 comments</span>
-                </div>
-                <!-- /.box-body -->
-                    <div class="box-footer box-comments f-14">
-                        <div class="box-comment">
-                        <!-- User image -->
-                            <img class="img-circle img-sm"
-                                src="/site/images/gates.jpeg" alt="User Image">
-
-                            <div class="comment-text">
-                                <span class="username">
-                                    Maria Gonzales
-                                    <span class="text-muted pull-right">8:03 PM Today</span>
-                                </span>
-
-                                It is a long established fact that a reader will be distracted
-                                by the readable content of a page when looking at its layout.
+                                    It is a long established fact that a reader will be distracted
+                                    by the readable content of a page when looking at its layout.
+                                </div>
+                            <!-- /.comment-text -->
                             </div>
-                        <!-- /.comment-text -->
-                        </div>
-                  <!-- /.box-comment -->
-                        <div class="box-comment f-14">
-                        <!-- User image -->
-                            <img class="img-circle img-sm"
-                                src="/site/images/gates.jpeg" alt="User Image">
+                      <!-- /.box-comment -->
+                            <div class="box-comment f-14">
+                            <!-- User image -->
+                                <img class="img-circle img-sm"
+                                    src="/site/images/gates.jpeg" alt="User Image">
 
-                            <div class="comment-text">
-                                <span class="username">
-                                    Nora Havisham
-                                    <span class="text-muted pull-right">8:03 PM Today</span>
-                                </span>
+                                <div class="comment-text">
+                                    <span class="username">
+                                        Nora Havisham
+                                        <span class="text-muted pull-right">8:03 PM Today</span>
+                                    </span>
 
-                                The point of using Lorem Ipsum is that it has a more-or-less
-                                normal distribution of letters, as opposed to using
-                                'Content here, content here', making it look like readable English.
+                                    The point of using Lorem Ipsum is that it has a more-or-less
+                                    normal distribution of letters, as opposed to using
+                                    'Content here, content here', making it look like readable English.
+                                </div>
+                            <!-- /.comment-text -->
                             </div>
-                        <!-- /.comment-text -->
-                        </div>
-                  <!-- /.box-comment -->
-                </div>
-                <!-- /.box-footer -->
-                <div class="box-footer">
-                    <form action="#" method="post" onsubmit="return false">
-                        <img class="img-responsive img-circle img-sm"
-                            src="/site/images/gates.jpeg" alt="Alt Text">
-                        <!-- .img-push is used to add margin to elements next to floating images -->
-                        <div class="img-push">
-                            <input type="text" class="form-control input-sm" placeholder="Press enter to post comment">
-                        </div>
-                    </form>
-                </div>
-                <!-- /.box-footer -->
-              </div>
-            <?php endforeach; ?>
+                      <!-- /.box-comment -->
+                    </div>
+                    <!-- /.box-footer -->
+                    <div class="box-footer">
+                        <form action="#" method="post" onsubmit="return false">
+                            <img class="img-responsive img-circle img-sm"
+                                src="/site/images/gates.jpeg" alt="Alt Text">
+                            <!-- .img-push is used to add margin to elements next to floating images -->
+                            <div class="img-push">
+                                <input type="text" class="form-control input-sm" placeholder="Press enter to post comment">
+                            </div>
+                        </form>
+                    </div>
+                    <!-- /.box-footer -->
+                  </div>
+                <?php endforeach; ?>
+
+            </div>
+
         </div>
         <!-- end of column for feeds -->
 
@@ -1155,6 +1165,10 @@ ul.block-list li
         //initialise slimscroll and easyticker
         $(".slimscroll").slimscroll({
             height: '250px'
+        });
+
+        $(".slim-posts").slimscroll({
+            height: '1600px'
         });
 
         $('.vticker').easyTicker({

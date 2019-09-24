@@ -26,6 +26,20 @@
 
          @yield('styles')
 
+         <style media="screen">
+             .mynav
+             {
+                 z-index: 1030;
+             }
+
+
+             .block-image
+             {
+                 width: 25px;
+                 height: 25px;
+             }
+         </style>
+
          </head>
 <body>
 

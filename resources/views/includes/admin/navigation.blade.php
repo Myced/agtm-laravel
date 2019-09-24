@@ -42,7 +42,20 @@
                         <li><a href="{{ route('categories') }}">Category List</a></li>
                     </ul>
                 </li>
-                                                <li>
+
+                <li>
+                    <a href="javascript: void(0);">
+                        <i class="icon-bubbles"></i>
+                        <span> Chat Rooms </span>
+                        <span class="menu-arrow"></span>
+                    </a>
+                    <ul class="nav-second-level" aria-expanded="false">
+                        <li><a href="{{ route('chat.room.add') }}">Add New Chat Room</a></li>
+                        <li><a href="{{ route('chat.rooms') }}">Chat Rooms</a></li>
+                    </ul>
+                </li>
+
+                <li>
                     <a href="javascript: void(0);">
                         <i class="fi-mail"></i>
                         <span> LOI </span>

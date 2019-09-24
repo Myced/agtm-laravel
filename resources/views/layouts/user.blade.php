@@ -5,8 +5,8 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <meta name="description" content="Multi level marketing">
-    <meta name="keywords" content="MLM, MultiLevel Marketing Cameroon, Glothelo">
+    <meta name="description" content="AGTM User Account">
+    <meta name="keywords" content="AGTM, User Account Management">
     <link rel="icon" type="image/x-icon" href="/favicon.ico">
     <title>User Panel - @yield('title')</title>
 
@@ -16,7 +16,17 @@
 
     <!-- =============== APP STYLES ===============-->
     <link rel="stylesheet" href="/userfiles/css/app.css" id="maincss">
-    <link rel="stylesheet" href="/userfiles/css/styles.css">
+    <!-- <link rel="stylesheet" href="/userfiles/css/styles.css"> -->
+
+    <style media="screen">
+        .required
+        {
+            color: red;
+            font-family: serif;
+            font-size: 20px;
+            font-weight: bold;
+        }
+    </style>
   </head>
 
   <body>

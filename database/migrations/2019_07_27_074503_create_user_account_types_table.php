@@ -18,7 +18,7 @@ class CreateUserAccountTypesTable extends Migration
             $table->string('user_id');
             $table->string('account_type_id');
             $table->boolean('filled')->default(false);
-            $table->boolean('validated')->default(false);
+            $table->boolean('approved')->default(false);
             $table->timestamps();
         });
     }

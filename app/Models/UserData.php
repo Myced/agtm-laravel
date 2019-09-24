@@ -10,4 +10,9 @@ class UserData extends Model
     {
         return $this->belongsTo('App\User');
     }
+
+    public function country()
+    {
+        return $this->belongsTo('App\Models\Country');
+    }
 }

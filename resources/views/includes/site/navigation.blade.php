@@ -35,7 +35,7 @@
                      </li>
 
                      <li>
-                         <a href="#">View All Mandates | Sourcing Agents</a>
+                         <a href="{{ route('mandates') }}">View All Mandates | Sourcing Agents</a>
                      </li>
 
                      <li>
@@ -47,11 +47,11 @@
                  <a href="#">Expoters/Sellers</a>
                  <ul>
                      <li>
-                         <a href="#">View All Available Exporters/Sellers</a>
+                         <a href="{{ route('exporters') }}">View All Available Exporters/Sellers</a>
                      </li>
 
                      <li>
-                         <a href="#">Looking for Expoters/Sellers</a>
+                         <a href="{{ route('exporters.looking') }}">Looking for Expoters/Sellers</a>
                      </li>
                  </ul>
              </li>
@@ -59,11 +59,11 @@
                  <a href="#">Importers/Buyers</a>
                  <ul>
                      <li>
-                         <a href="#">View All Available Importers/Buyers</a>
+                         <a href="{{ route('importers') }}">View All Available Importers/Buyers</a>
                      </li>
 
                      <li>
-                         <a href="#">Looking for Importers/Buyers</a>
+                         <a href="{{ route('importers.looking') }}">Looking for Importers/Buyers</a>
                      </li>
                  </ul>
              </li>
@@ -72,11 +72,11 @@
                  <a href="#">Available SCO</a>
                  <ul>
                      <li>
-                         <a href="#">List all SCOs Available</a>
+                         <a href="{{ route('site.scos') }}">List all SCOs Available</a>
                      </li>
 
                      <li>
-                         <a href="#">Looking for SCO</a>
+                         <a href="{{ route('sco.looking') }}">Looking for SCO</a>
                      </li>
                  </ul>
              </li>
@@ -84,11 +84,11 @@
                  <a href="#">Available LOI</a>
                  <ul>
                      <li>
-                         <a href="#">List all LOIs Available</a>
+                         <a href="{{ route('site.lois') }}">List all LOIs Available</a>
                      </li>
 
                      <li>
-                         <a href="#">Looking for LOI</a>
+                         <a href="{{ route('loi.looking') }}">Looking for LOI</a>
                      </li>
                  </ul>
              </li>
@@ -104,7 +104,7 @@
                      <a href="#">My Account</a>
                      <ul>
                          <li>
-                             <a href="#">My Account</a>
+                             <a href="{{ route('user.dashboard') }}">My Account</a>
                          </li>
 
                          <li>

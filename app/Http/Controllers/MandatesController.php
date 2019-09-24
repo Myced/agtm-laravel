@@ -9,7 +9,7 @@ class MandatesController extends Controller
 {
     public function index()
     {
-        return view('mandates');
+        return view('site.mandates');
     }
 
     public function showComplainForm()
@@ -52,6 +52,8 @@ class MandatesController extends Controller
 
     public function storeRequest(Request $request)
     {
+        session()->flash('success', 'Request Saved');
 
+        return back();
     }
 }

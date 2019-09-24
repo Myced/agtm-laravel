@@ -9,15 +9,15 @@
           <div class="user-block-picture">
             <div class="user-block-status">
               <img class="img-thumbnail rounded-circle"
-              src="{{ \App\User::DEFAULT_AVATAR }}"
+              src="{{ $user->avatar }}"
               alt="Avatar" width="60" height="60">
               <div class="circle bg-success circle-lg"></div>
             </div>
           </div>
           <!-- Name and Job-->
           <div class="user-block-info">
-            <span class="user-block-name">John Obia</span>
-            <span class="user-block-role">johnoba@gmail.com</span>
+            <span class="user-block-name">{{ $user->name }}</span>
+            <span class="user-block-role">{{ $user->email }}</span>
           </div>
         </div>
       </div>
@@ -35,12 +35,6 @@
       </a>
     </li>
 
-    <li class="">
-      <a href="{{ route('products') }}" title="To Website">
-        <em class="fa fa-cubes"></em>
-        <span >To Products</span>
-      </a>
-    </li>
 
     <li class="nav-heading ">
       <span >DASHBOARD</span>
@@ -50,6 +44,13 @@
       <a href="{{ route('user.dashboard') }}" title="Dashboard">
         <em class="icon-speedometer"></em>
         <span >Dashboard</span>
+      </a>
+    </li>
+
+    <li class="{{ Request::route()->named('user.profile') ? 'active' : '' }}">
+      <a href="{{ route('user.profile') }}" title="My Profile">
+        <em class="icon-user"></em>
+        <span >My Profile</span>
       </a>
     </li>
 

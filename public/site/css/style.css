@@ -119,6 +119,11 @@ ul.nav
     background-color: #5260f4;
 }
 
+.m-t-10
+{
+    margin-top: 20px;
+}
+
 .table-type-1
 {
     border: 1px solid #aaa;

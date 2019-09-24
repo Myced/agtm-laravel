@@ -9,7 +9,7 @@
     <div class="col-md-12">
         <div class="card-box">
             <h2 class="page-header">
-                All Categories
+                Add New Category
             </h2>
 
             <div class="row">

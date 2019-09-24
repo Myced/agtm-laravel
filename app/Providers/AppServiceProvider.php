@@ -23,6 +23,10 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        //
+        //for every /user uri, pass the associated user along
+        view()->composer('user.*', function($view){
+            //pass the view with data
+            $view->with('user', auth()->user());
+        });
     }
 }
